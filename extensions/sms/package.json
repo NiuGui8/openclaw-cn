@@ -1,0 +1,33 @@
+{
+  "name": "@openclaw/sms",
+  "version": "2026.3.9",
+  "description": "OpenClaw SMS channel plugin (Aliyun SMS provider)",
+  "type": "module",
+  "dependencies": {
+    "@sinclair/typebox": "0.34.48",
+    "zod": "^4.3.6"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "channel": {
+      "id": "sms",
+      "label": "SMS",
+      "selectionLabel": "SMS (短信)",
+      "docsPath": "/channels/sms",
+      "docsLabel": "sms",
+      "blurb": "短信发送 (阿里云短信)",
+      "aliases": [
+        "aliyun-sms"
+      ],
+      "order": 95,
+      "quickstartAllowFrom": true
+    },
+    "install": {
+      "npmSpec": "@openclaw/sms",
+      "localPath": "extensions/sms",
+      "defaultChoice": "npm"
+    }
+  }
+}

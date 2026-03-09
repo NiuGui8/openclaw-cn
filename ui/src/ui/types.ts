@@ -275,6 +275,77 @@ export type MSTeamsStatus = {
   lastProbeAt?: number | null;
 };
 
+export type DingTalkProbe = {
+  ok: boolean;
+  error?: string | null;
+  webhookUrl?: string | null;
+};
+
+export type DingTalkStatus = {
+  configured: boolean;
+  running: boolean;
+  webhookUrl?: string | null;
+  lastStartAt?: number | null;
+  lastStopAt?: number | null;
+  lastError?: string | null;
+  probe?: DingTalkProbe | null;
+  lastProbeAt?: number | null;
+};
+
+export type WeComProbe = {
+  ok: boolean;
+  error?: string | null;
+  webhookUrl?: string | null;
+};
+
+export type WeComStatus = {
+  configured: boolean;
+  running: boolean;
+  webhookUrl?: string | null;
+  lastStartAt?: number | null;
+  lastStopAt?: number | null;
+  lastError?: string | null;
+  probe?: WeComProbe | null;
+  lastProbeAt?: number | null;
+};
+
+export type QQProbe = {
+  ok: boolean;
+  error?: string | null;
+  httpApiUrl?: string | null;
+  botName?: string | null;
+  botId?: number | null;
+};
+
+export type QQStatus = {
+  configured: boolean;
+  running: boolean;
+  httpApiUrl?: string | null;
+  lastStartAt?: number | null;
+  lastStopAt?: number | null;
+  lastError?: string | null;
+  probe?: QQProbe | null;
+  lastProbeAt?: number | null;
+};
+
+export type SMSProbe = {
+  ok: boolean;
+  error?: string | null;
+  provider?: string | null;
+};
+
+export type SMSStatus = {
+  configured: boolean;
+  running: boolean;
+  provider?: string | null;
+  signName?: string | null;
+  lastStartAt?: number | null;
+  lastStopAt?: number | null;
+  lastError?: string | null;
+  probe?: SMSProbe | null;
+  lastProbeAt?: number | null;
+};
+
 export type ConfigSnapshotIssue = {
   path: string;
   message: string;

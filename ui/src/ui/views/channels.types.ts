@@ -2,14 +2,18 @@ import type {
   ChannelAccountSnapshot,
   ChannelsStatusSnapshot,
   ConfigUiHints,
+  DingTalkStatus,
   DiscordStatus,
   GoogleChatStatus,
   IMessageStatus,
   NostrProfile,
   NostrStatus,
+  QQStatus,
   SignalStatus,
   SlackStatus,
+  SMSStatus,
   TelegramStatus,
+  WeComStatus,
   WhatsAppStatus,
 } from "../types.ts";
 import type { NostrProfileFormState } from "./channels.nostr-profile-form.ts";
@@ -58,5 +62,9 @@ export type ChannelsChannelData = {
   signal?: SignalStatus | null;
   imessage?: IMessageStatus | null;
   nostr?: NostrStatus | null;
+  dingtalk?: DingTalkStatus | null;
+  wecom?: WeComStatus | null;
+  qq?: QQStatus | null;
+  sms?: SMSStatus | null;
   channelAccounts?: Record<string, ChannelAccountSnapshot[]> | null;
 };

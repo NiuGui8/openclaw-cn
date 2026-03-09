@@ -4,26 +4,34 @@ import type {
   ChannelAccountSnapshot,
   ChannelUiMetaEntry,
   ChannelsStatusSnapshot,
+  DingTalkStatus,
   DiscordStatus,
   GoogleChatStatus,
   IMessageStatus,
   NostrProfile,
   NostrStatus,
+  QQStatus,
   SignalStatus,
   SlackStatus,
+  SMSStatus,
   TelegramStatus,
+  WeComStatus,
   WhatsAppStatus,
 } from "../types.ts";
 import { renderChannelConfigSection } from "./channels.config.ts";
+import { renderDingTalkCard } from "./channels.dingtalk.ts";
 import { renderDiscordCard } from "./channels.discord.ts";
 import { renderGoogleChatCard } from "./channels.googlechat.ts";
 import { renderIMessageCard } from "./channels.imessage.ts";
 import { renderNostrCard } from "./channels.nostr.ts";
+import { renderQQCard } from "./channels.qq.ts";
 import { channelEnabled, renderChannelAccountCount } from "./channels.shared.ts";
 import { renderSignalCard } from "./channels.signal.ts";
 import { renderSlackCard } from "./channels.slack.ts";
+import { renderSMSCard } from "./channels.sms.ts";
 import { renderTelegramCard } from "./channels.telegram.ts";
 import type { ChannelKey, ChannelsChannelData, ChannelsProps } from "./channels.types.ts";
+import { renderWeComCard } from "./channels.wecom.ts";
 import { renderWhatsAppCard } from "./channels.whatsapp.ts";
 
 export function renderChannels(props: ChannelsProps) {
@@ -36,6 +44,10 @@ export function renderChannels(props: ChannelsProps) {
   const signal = (channels?.signal ?? null) as SignalStatus | null;
   const imessage = (channels?.imessage ?? null) as IMessageStatus | null;
   const nostr = (channels?.nostr ?? null) as NostrStatus | null;
+  const dingtalk = (channels?.dingtalk ?? null) as DingTalkStatus | null;
+  const wecom = (channels?.wecom ?? null) as WeComStatus | null;
+  const qq = (channels?.qq ?? null) as QQStatus | null;
+  const sms = (channels?.sms ?? null) as SMSStatus | null;
   const channelOrder = resolveChannelOrder(props.snapshot);
   const orderedChannels = channelOrder
     .map((key, index) => ({
@@ -62,6 +74,10 @@ export function renderChannels(props: ChannelsProps) {
           signal,
           imessage,
           nostr,
+          dingtalk,
+          wecom,
+          qq,
+          sms,
           channelAccounts: props.snapshot?.channelAccounts ?? null,
         }),
       )}
@@ -172,6 +188,30 @@ function renderChannel(key: ChannelKey, props: ChannelsProps, data: ChannelsChan
         onEditProfile: () => props.onNostrProfileEdit(accountId, profile),
       });
     }
+    case "dingtalk":
+      return renderDingTalkCard({
+        props,
+        dingtalk: data.dingtalk,
+        accountCountLabel,
+      });
+    case "wecom":
+      return renderWeComCard({
+        props,
+        wecom: data.wecom,
+        accountCountLabel,
+      });
+    case "qq":
+      return renderQQCard({
+        props,
+        qq: data.qq,
+        accountCountLabel,
+      });
+    case "sms":
+      return renderSMSCard({
+        props,
+        sms: data.sms,
+        accountCountLabel,
+      });
     default:
       return renderGenericChannelCard(key, props, data.channelAccounts ?? {});
   }

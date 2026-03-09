@@ -803,3 +803,16 @@ export type { ContextEngineFactory } from "../context-engine/registry.js";
 
 // Security utilities
 export { redactSensitiveText } from "../logging/redact.js";
+
+// Channel: DingTalk
+export * from "./dingtalk.js";
+
+// Channel: WeCom
+export * from "./wecom.js";
+
+// Channel: QQ
+export * from "./qq.js";
+
+// Channel: SMS
+export * from "./sms.js";
+
