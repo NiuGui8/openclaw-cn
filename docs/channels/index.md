@@ -35,6 +35,10 @@ Text is supported everywhere; media and reactions vary by channel.
 - [WhatsApp](/channels/whatsapp) — Most popular; uses Baileys and requires QR pairing.
 - [Zalo](/channels/zalo) — Zalo Bot API; Vietnam's popular messenger (plugin, installed separately).
 - [Zalo Personal](/channels/zalouser) — Zalo personal account via QR login (plugin, installed separately).
+- [钉钉](/channels/dingtalk) — 钉钉机器人 Webhook (plugin, installed separately).
+- [企业微信](/channels/wecom) — 企业微信机器人 Webhook (plugin, installed separately).
+- [QQ](/channels/qq) — QQ 机器人 via go-cqhttp (plugin, installed separately).
+- [短信](/channels/sms) — 阿里云短信发送 (plugin, installed separately).
 
 ## Notes
 
