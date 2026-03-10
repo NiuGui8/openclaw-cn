@@ -23,12 +23,12 @@
 
 如果你想要一个感觉本地、快速、始终在线的个人助手，这就是它。
 
-[网站](https://openclaw.ai) · [文档](https://docs.openclaw.ai) · [愿景](VISION.md) · [DeepWiki](https://deepwiki.com/openclaw/openclaw) · [入门指南](https://docs.openclaw.ai/start/getting-started) · [更新](https://docs.openclaw.ai/install/updating) · [展示](https://docs.openclaw.ai/start/showcase) · [常见问题](https://docs.openclaw.ai/help/faq) · [向导](https://docs.openclaw.ai/start/wizard) · [Nix](https://github.com/openclaw/nix-openclaw) · [Docker](https://docs.openclaw.ai/install/docker) · [Discord](https://discord.gg/clawd)
+[网站](https://openclaw.ai) · [文档](https://github.com/NiuGui8/openclaw-cn/blob/main) · [愿景](VISION.md) · [DeepWiki](https://deepwiki.com/openclaw/openclaw) · [入门指南](https://github.com/NiuGui8/openclaw-cn/blob/main/start/getting-started) · [更新](https://github.com/NiuGui8/openclaw-cn/blob/main/install/updating) · [展示](https://github.com/NiuGui8/openclaw-cn/blob/main/start/showcase) · [常见问题](https://github.com/NiuGui8/openclaw-cn/blob/main/help/faq) · [向导](https://github.com/NiuGui8/openclaw-cn/blob/main/start/wizard) · [Nix](https://github.com/openclaw/nix-openclaw) · [Docker](https://github.com/NiuGui8/openclaw-cn/blob/main/install/docker) · [Discord](https://discord.gg/clawd)
 
 推荐方式：在终端运行 onboarding 向导（`openclaw onboard`）。
 向导会逐步引导你设置 Gateway、工作区、渠道和技能。CLI 向导是推荐路径，支持 **macOS、Linux 和 Windows（通过 WSL2；强烈推荐）**。
 支持 npm、pnpm 或 bun。
-新用户？从这里开始：[入门指南](https://docs.openclaw.ai/start/getting-started)
+新用户？从这里开始：[入门指南](https://github.com/NiuGui8/openclaw-cn/blob/main/start/getting-started)
 
 ## 赞助商
 
@@ -40,12 +40,12 @@
 
 - **[OpenAI](https://openai.com/)** (ChatGPT/Codex)
 
-注意：虽然支持许多提供商/模型，但为获得最佳体验并降低提示注入风险，请使用你能使用的最强大的最新一代模型。参见 [Onboarding](https://docs.openclaw.ai/start/onboarding)。
+注意：虽然支持许多提供商/模型，但为获得最佳体验并降低提示注入风险，请使用你能使用的最强大的最新一代模型。参见 [Onboarding](https://github.com/NiuGui8/openclaw-cn/blob/main/start/onboarding)。
 
 ## 模型（选择 + 认证）
 
-- 模型配置 + CLI：[Models](https://docs.openclaw.ai/concepts/models)
-- 认证配置轮换（OAuth vs API 密钥）+ 回退：[Model failover](https://docs.openclaw.ai/concepts/model-failover)
+- 模型配置 + CLI：[Models](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/models)
+- 认证配置轮换（OAuth vs API 密钥）+ 回退：[Model failover](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/model-failover)
 
 ## 安装（推荐）
 
@@ -64,7 +64,7 @@ openclaw onboard --install-daemon
 
 运行环境：**Node ≥22**。
 
-完整新手指南（认证、配对、渠道）：[Getting started](https://docs.openclaw.ai/start/getting-started)
+完整新手指南（认证、配对、渠道）：[Getting started](https://github.com/NiuGui8/openclaw-cn/blob/main/start/getting-started)
 
 ```bash
 openclaw onboard --install-daemon
@@ -78,7 +78,7 @@ openclaw message send --to +1234567890 --message "Hello from OpenClaw"
 openclaw agent --message "Ship checklist" --thinking high
 ```
 
-升级？[更新指南](https://docs.openclaw.ai/install/updating)（并运行 `openclaw doctor`）。
+升级？[更新指南](https://github.com/NiuGui8/openclaw-cn/blob/main/install/updating)（并运行 `openclaw doctor`）。
 
 ## 开发渠道
 
@@ -87,7 +87,7 @@ openclaw agent --message "Ship checklist" --thinking high
 - **dev**：主分支的最新提交，npm dist-tag `dev`（发布时）。
 
 切换渠道（git + npm）：`openclaw update --channel stable|beta|dev`
-详情：[Development channels](https://docs.openclaw.ai/install/development-channels)
+详情：[Development channels](https://github.com/NiuGui8/openclaw-cn/blob/main/install/development-channels)
 
 ## 从源码构建（开发）
 
@@ -113,7 +113,7 @@ pnpm gateway:watch
 
 OpenClaw 连接到真实的通讯平台。将入站 DM 视为**不受信任的输入**。
 
-完整安全指南：[Security](https://docs.openclaw.ai/gateway/security)
+完整安全指南：[Security](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway/security)
 
 Telegram/WhatsApp/Signal/iMessage/Microsoft Teams/Discord/Google Chat/Slack 的默认行为：
 
@@ -125,14 +125,14 @@ Telegram/WhatsApp/Signal/iMessage/Microsoft Teams/Discord/Google Chat/Slack 的�
 
 ## 亮点
 
-- **[本地优先 Gateway](https://docs.openclaw.ai/gateway)** — 会话、渠道、工具和事件的单一控制平面。
-- **[多渠道收件箱](https://docs.openclaw.ai/channels)** — WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、BlueBubbles (iMessage)、iMessage (旧版)、IRC、Microsoft Teams、Matrix、飞书、LINE、Mattermost、Nextcloud Talk、Nostr、Synology Chat、Tlon、Twitch、Zalo、Zalo Personal、WebChat、钉钉、企业微信、QQ、短信、macOS、iOS/Android。
-- **[多代理路由](https://docs.openclaw.ai/gateway/configuration)** — 将入站渠道/账户/对等点路由到隔离的代理（工作区 + 每代理会话）。
-- **[语音唤醒](https://docs.openclaw.ai/nodes/voicewake) + [对话模式](https://docs.openclaw.ai/nodes/talk)** — macOS/iOS 上的唤醒词和 Android 上的连续语音（ElevenLabs + 系统 TTS 回退）。
-- **[实时 Canvas](https://docs.openclaw.ai/platforms/mac/canvas)** — 代理驱动的可视化工作区，包含 [A2UI](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui)。
-- **[一流工具](https://docs.openclaw.ai/tools)** — 浏览器、canvas、节点、cron、会话和 Discord/Slack 操作。
-- **[伴侣应用](https://docs.openclaw.ai/platforms/macos)** — macOS 菜单栏应用 + iOS/Android [节点](https://docs.openclaw.ai/nodes)。
-- **[Onboarding](https://docs.openclaw.ai/start/wizard) + [技能](https://docs.openclaw.ai/tools/skills)** — 向导驱动的设置，包含捆绑/管理/工作区技能。
+- **[本地优先 Gateway](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway)** — 会话、渠道、工具和事件的单一控制平面。
+- **[多渠道收件箱](https://github.com/NiuGui8/openclaw-cn/blob/main/channels)** — WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、BlueBubbles (iMessage)、iMessage (旧版)、IRC、Microsoft Teams、Matrix、飞书、LINE、Mattermost、Nextcloud Talk、Nostr、Synology Chat、Tlon、Twitch、Zalo、Zalo Personal、WebChat、钉钉、企业微信、QQ、短信、macOS、iOS/Android。
+- **[多代理路由](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway/configuration)** — 将入站渠道/账户/对等点路由到隔离的代理（工作区 + 每代理会话）。
+- **[语音唤醒](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes/voicewake) + [对话模式](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes/talk)** — macOS/iOS 上的唤醒词和 Android 上的连续语音（ElevenLabs + 系统 TTS 回退）。
+- **[实时 Canvas](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/mac/canvas)** — 代理驱动的可视化工作区，包含 [A2UI](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/mac/canvas#canvas-a2ui)。
+- **[一流工具](https://github.com/NiuGui8/openclaw-cn/blob/main/tools)** — 浏览器、canvas、节点、cron、会话和 Discord/Slack 操作。
+- **[伴侣应用](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/macos)** — macOS 菜单栏应用 + iOS/Android [节点](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes)。
+- **[Onboarding](https://github.com/NiuGui8/openclaw-cn/blob/main/start/wizard) + [技能](https://github.com/NiuGui8/openclaw-cn/blob/main/tools/skills)** — 向导驱动的设置，包含捆绑/管理/工作区技能。
 
 ## Star History
 
@@ -142,45 +142,45 @@ Telegram/WhatsApp/Signal/iMessage/Microsoft Teams/Discord/Google Chat/Slack 的�
 
 ### 核心平台
 
-- 带会话、存在、配置、cron、webhook、[Control UI](https://docs.openclaw.ai/web) 和 [Canvas 主机](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui) 的 [Gateway WS 控制平面](https://docs.openclaw.ai/gateway)。
-- [CLI 界面](https://docs.openclaw.ai/tools/agent-send)：gateway、agent、send、[wizard](https://docs.openclaw.ai/start/wizard) 和 [doctor](https://docs.openclaw.ai/gateway/doctor)。
-- [Pi 代理运行时](https://docs.openclaw.ai/concepts/agent) RPC 模式，支持工具流和块流。
-- [会话模型](https://docs.openclaw.ai/concepts/session)：`main` 用于直接聊天、群组隔离、激活模式、队列模式、回复。群组规则：[Groups](https://docs.openclaw.ai/channels/groups)。
-- [媒体管道](https://docs.openclaw.ai/nodes/images)：图片/音频/视频、转录钩子、大小限制、临时文件生命周期。音频详情：[Audio](https://docs.openclaw.ai/nodes/audio)。
+- 带会话、存在、配置、cron、webhook、[Control UI](https://github.com/NiuGui8/openclaw-cn/blob/main/web) 和 [Canvas 主机](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/mac/canvas#canvas-a2ui) 的 [Gateway WS 控制平面](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway)。
+- [CLI 界面](https://github.com/NiuGui8/openclaw-cn/blob/main/tools/agent-send)：gateway、agent、send、[wizard](https://github.com/NiuGui8/openclaw-cn/blob/main/start/wizard) 和 [doctor](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway/doctor)。
+- [Pi 代理运行时](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/agent) RPC 模式，支持工具流和块流。
+- [会话模型](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/session)：`main` 用于直接聊天、群组隔离、激活模式、队列模式、回复。群组规则：[Groups](https://github.com/NiuGui8/openclaw-cn/blob/main/channels/groups)。
+- [媒体管道](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes/images)：图片/音频/视频、转录钩子、大小限制、临时文件生命周期。音频详情：[Audio](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes/audio)。
 
 ### 渠道
 
-- [渠道](https://docs.openclaw.ai/channels)：[WhatsApp](https://docs.openclaw.ai/channels/whatsapp) (Baileys)、[Telegram](https://docs.openclaw.ai/channels/telegram) (grammY)、[Slack](https://docs.openclaw.ai/channels/slack) (Bolt)、[Discord](https://docs.openclaw.ai/channels/discord) (discord.js)、[Google Chat](https://docs.openclaw.ai/channels/googlechat) (Chat API)、[Signal](https://docs.openclaw.ai/channels/signal) (signal-cli)、[BlueBubbles](https://docs.openclaw.ai/channels/bluebubbles) (iMessage，推荐)、[iMessage](https://docs.openclaw.ai/channels/imessage) (旧版 imsg)、[IRC](https://docs.openclaw.ai/channels/irc)、[Microsoft Teams](https://docs.openclaw.ai/channels/msteams)、[Matrix](https://docs.openclaw.ai/channels/matrix)、[飞书](https://docs.openclaw.ai/channels/feishu)、[LINE](https://docs.openclaw.ai/channels/line)、[Mattermost](https://docs.openclaw.ai/channels/mattermost)、[Nextcloud Talk](https://docs.openclaw.ai/channels/nextcloud-talk)、[Nostr](https://docs.openclaw.ai/channels/nostr)、[Synology Chat](https://docs.openclaw.ai/channels/synology-chat)、[Tlon](https://docs.openclaw.ai/channels/tlon)、[Twitch](https://docs.openclaw.ai/channels/twitch)、[Zalo](https://docs.openclaw.ai/channels/zalo)、[Zalo Personal](https://docs.openclaw.ai/channels/zalouser)、[WebChat](https://docs.openclaw.ai/web/webchat)、[钉钉](https://docs.openclaw.ai/channels/dingtalk)、[企业微信](https://docs.openclaw.ai/channels/wecom)、[QQ](https://docs.openclaw.ai/channels/qq)、[短信](https://docs.openclaw.ai/channels/sms)。
-- [群组路由](https://docs.openclaw.ai/channels/group-messages)：提及门控、回复标签、每渠道分块和路由。渠道规则：[Channels](https://docs.openclaw.ai/channels)。
+- [渠道](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/index.md)：[WhatsApp](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/whatsapp.md) (Baileys)、[Telegram](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/telegram.md) (grammY)、[Slack](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/slack.md) (Bolt)、[Discord](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/discord.md) (discord.js)、[Google Chat](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/googlechat.md) (Chat API)、[Signal](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/signal.md) (signal-cli)、[BlueBubbles](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/bluebubbles.md) (iMessage，推荐)、[iMessage](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/imessage.md) (旧版 imsg)、[IRC](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/irc.md)、[Microsoft Teams](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/msteams.md)、[Matrix](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/matrix.md)、[飞书](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/feishu.md)、[LINE](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/line.md)、[Mattermost](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/mattermost.md)、[Nextcloud Talk](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/nextcloud-talk.md)、[Nostr](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/nostr.md)、[Synology Chat](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/synology-chat.md)、[Tlon](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/tlon.md)、[Twitch](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/twitch.md)、[Zalo](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/zalo.md)、[Zalo Personal](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/zalouser.md)、[WebChat](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/web/webchat.md)、[钉钉](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/dingtalk.md)、[企业微信](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/wecom.md)、[QQ](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/qq.md)、[短信](https://github.com/NiuGui8/openclaw-cn/blob/main/docs/channels/sms.md)。
+- [群组路由](https://github.com/NiuGui8/openclaw-cn/blob/main/channels/group-messages)：提及门控、回复标签、每渠道分块和路由。渠道规则：[Channels](https://github.com/NiuGui8/openclaw-cn/blob/main/channels)。
 
 ### 应用 + 节点
 
-- [macOS 应用](https://docs.openclaw.ai/platforms/macos)：菜单栏控制平面、[语音唤醒](https://docs.openclaw.ai/nodes/voicewake)/PTT、[对话模式](https://docs.openclaw.ai/nodes/talk) 覆盖层、[WebChat](https://docs.openclaw.ai/web/webchat)、调试工具、[远程 Gateway](https://docs.openclaw.ai/gateway/remote) 控制。
-- [iOS 节点](https://docs.openclaw.ai/platforms/ios)：[Canvas](https://docs.openclaw.ai/platforms/mac/canvas)、[语音唤醒](https://docs.openclaw.ai/nodes/voicewake)、[对话模式](https://docs.openclaw.ai/nodes/talk)、相机、屏幕录制、Bonjour + 设备配对。
-- [Android 节点](https://docs.openclaw.ai/platforms/android)：连接标签（设置码/手动）、聊天会话、语音标签、[Canvas](https://docs.openclaw.ai/platforms/mac/canvas)、相机/屏幕录制，以及 Android 设备命令（通知/位置/短信/照片/联系人/日历/运动/应用更新）。
-- [macOS 节点模式](https://docs.openclaw.ai/nodes)：system.run/notify + canvas/camera 暴露。
+- [macOS 应用](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/macos)：菜单栏控制平面、[语音唤醒](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes/voicewake)/PTT、[对话模式](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes/talk) 覆盖层、[WebChat](https://github.com/NiuGui8/openclaw-cn/blob/main/web/webchat)、调试工具、[远程 Gateway](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway/remote) 控制。
+- [iOS 节点](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/ios)：[Canvas](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/mac/canvas)、[语音唤醒](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes/voicewake)、[对话模式](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes/talk)、相机、屏幕录制、Bonjour + 设备配对。
+- [Android 节点](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/android)：连接标签（设置码/手动）、聊天会话、语音标签、[Canvas](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/mac/canvas)、相机/屏幕录制，以及 Android 设备命令（通知/位置/短信/照片/联系人/日历/运动/应用更新）。
+- [macOS 节点模式](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes)：system.run/notify + canvas/camera 暴露。
 
 ### 工具 + 自动化
 
-- [浏览器控制](https://docs.openclaw.ai/tools/browser)：专用 openclaw Chrome/Chromium、快照、操作、上传、配置文件。
-- [Canvas](https://docs.openclaw.ai/platforms/mac/canvas)：[A2UI](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui) 推送/重置、eval、快照。
-- [节点](https://docs.openclaw.ai/nodes)：相机快照/剪辑、屏幕录制、[位置获取](https://docs.openclaw.ai/nodes/location-command)、通知。
-- [Cron + 唤醒](https://docs.openclaw.ai/automation/cron-jobs)；[webhooks](https://docs.openclaw.ai/automation/webhook)；[Gmail Pub/Sub](https://docs.openclaw.ai/automation/gmail-pubsub)。
-- [技能平台](https://docs.openclaw.ai/tools/skills)：捆绑、管理和工作区技能，具有安装门控和 UI。
+- [浏览器控制](https://github.com/NiuGui8/openclaw-cn/blob/main/tools/browser)：专用 openclaw Chrome/Chromium、快照、操作、上传、配置文件。
+- [Canvas](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/mac/canvas)：[A2UI](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/mac/canvas#canvas-a2ui) 推送/重置、eval、快照。
+- [节点](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes)：相机快照/剪辑、屏幕录制、[位置获取](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes/location-command)、通知。
+- [Cron + 唤醒](https://github.com/NiuGui8/openclaw-cn/blob/main/automation/cron-jobs)；[webhooks](https://github.com/NiuGui8/openclaw-cn/blob/main/automation/webhook)；[Gmail Pub/Sub](https://github.com/NiuGui8/openclaw-cn/blob/main/automation/gmail-pubsub)。
+- [技能平台](https://github.com/NiuGui8/openclaw-cn/blob/main/tools/skills)：捆绑、管理和工作区技能，具有安装门控和 UI。
 
 ### 运行时 + 安全
 
-- [渠道路由](https://docs.openclaw.ai/channels/channel-routing)、[重试策略](https://docs.openclaw.ai/concepts/retry) 和 [流式/分块](https://docs.openclaw.ai/concepts/streaming)。
-- [存在](https://docs.openclaw.ai/concepts/presence)、[输入提示](https://docs.openclaw.ai/concepts/typing-indicators) 和 [使用跟踪](https://docs.openclaw.ai/concepts/usage-tracking)。
-- [模型](https://docs.openclaw.ai/concepts/models)、[模型故障转移](https://docs.openclaw.ai/concepts/model-failover) 和 [会话修剪](https://docs.openclaw.ai/concepts/session-pruning)。
-- [安全](https://docs.openclaw.ai/gateway/security) 和 [故障排除](https://docs.openclaw.ai/channels/troubleshooting)。
+- [渠道路由](https://github.com/NiuGui8/openclaw-cn/blob/main/channels/channel-routing)、[重试策略](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/retry) 和 [流式/分块](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/streaming)。
+- [存在](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/presence)、[输入提示](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/typing-indicators) 和 [使用跟踪](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/usage-tracking)。
+- [模型](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/models)、[模型故障转移](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/model-failover) 和 [会话修剪](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/session-pruning)。
+- [安全](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway/security) 和 [故障排除](https://github.com/NiuGui8/openclaw-cn/blob/main/channels/troubleshooting)。
 
 ### 运维 + 打包
 
-- [Control UI](https://docs.openclaw.ai/web) + [WebChat](https://docs.openclaw.ai/web/webchat) 直接从 Gateway 提供服务。
-- [Tailscale Serve/Funnel](https://docs.openclaw.ai/gateway/tailscale) 或 [SSH 隧道](https://docs.openclaw.ai/gateway/remote)，支持令牌/密码认证。
-- [Nix 模式](https://docs.openclaw.ai/install/nix) 用于声明式配置；[Docker](https://docs.openclaw.ai/install/docker) 安装。
-- [Doctor](https://docs.openclaw.ai/gateway/doctor) 迁移、[日志](https://docs.openclaw.ai/logging)。
+- [Control UI](https://github.com/NiuGui8/openclaw-cn/blob/main/web) + [WebChat](https://github.com/NiuGui8/openclaw-cn/blob/main/web/webchat) 直接从 Gateway 提供服务。
+- [Tailscale Serve/Funnel](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway/tailscale) 或 [SSH 隧道](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway/remote)，支持令牌/密码认证。
+- [Nix 模式](https://github.com/NiuGui8/openclaw-cn/blob/main/install/nix) 用于声明式配置；[Docker](https://github.com/NiuGui8/openclaw-cn/blob/main/install/docker) 安装。
+- [Doctor](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway/doctor) 迁移、[日志](https://github.com/NiuGui8/openclaw-cn/blob/main/logging)。
 
 ## 工作原理（简要）
 
@@ -203,12 +203,12 @@ WhatsApp / Telegram / Slack / Discord / Google Chat / Signal / iMessage / BlueBu
 
 ## 关键子系统
 
-- **[Gateway WebSocket 网络](https://docs.openclaw.ai/concepts/architecture)** — 客户端、工具和事件的单一 WS 控制平面（加运维：[Gateway runbook](https://docs.openclaw.ai/gateway)）。
-- **[Tailscale 暴露](https://docs.openclaw.ai/gateway/tailscale)** — Serve/Funnel 用于 Gateway 仪表板 + WS（远程访问：[Remote](https://docs.openclaw.ai/gateway/remote)）。
-- **[浏览器控制](https://docs.openclaw.ai/tools/browser)** — openclaw 管理的 Chrome/Chromium，带 CDP 控制。
-- **[Canvas + A2UI](https://docs.openclaw.ai/platforms/mac/canvas)** — 代理驱动的可视化工作区（A2UI 主机：[Canvas/A2UI](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui)）。
-- **[语音唤醒](https://docs.openclaw.ai/nodes/voicewake) + [对话模式](https://docs.openclaw.ai/nodes/talk)** — macOS/iOS 上的唤醒词加 Android 上的连续语音。
-- **[节点](https://docs.openclaw.ai/nodes)** — Canvas、相机快照/剪辑、屏幕录制、`location.get`、通知，加上 macOS 专属的 `system.run`/`system.notify`。
+- **[Gateway WebSocket 网络](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/architecture)** — 客户端、工具和事件的单一 WS 控制平面（加运维：[Gateway runbook](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway)）。
+- **[Tailscale 暴露](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway/tailscale)** — Serve/Funnel 用于 Gateway 仪表板 + WS（远程访问：[Remote](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway/remote)）。
+- **[浏览器控制](https://github.com/NiuGui8/openclaw-cn/blob/main/tools/browser)** — openclaw 管理的 Chrome/Chromium，带 CDP 控制。
+- **[Canvas + A2UI](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/mac/canvas)** — 代理驱动的可视化工作区（A2UI 主机：[Canvas/A2UI](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/mac/canvas#canvas-a2ui)）。
+- **[语音唤醒](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes/voicewake) + [对话模式](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes/talk)** — macOS/iOS 上的唤醒词加 Android 上的连续语音。
+- **[节点](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes)** — Canvas、相机快照/剪辑、屏幕录制、`location.get`、通知，加上 macOS 专属的 `system.run`/`system.notify`。
 
 ## Tailscale 访问（Gateway 仪表板）
 
@@ -225,7 +225,7 @@ OpenClaw 可以在 Gateway 保持绑定到 loopback 的同时自动配置 Tailsc
 - 除非设置 `gateway.auth.mode: "password"`，否则 Funnel 拒绝启动。
 - 可选：`gateway.tailscale.resetOnExit` 在关闭时撤销 Serve/Funnel。
 
-详情：[Tailscale 指南](https://docs.openclaw.ai/gateway/tailscale) · [Web 界面](https://docs.openclaw.ai/web)
+详情：[Tailscale 指南](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway/tailscale) · [Web 界面](https://github.com/NiuGui8/openclaw-cn/blob/main/web)
 
 ## 远程 Gateway（Linux 很棒）
 
@@ -235,7 +235,7 @@ OpenClaw 可以在 Gateway 保持绑定到 loopback 的同时自动配置 Tailsc
 - **设备节点** 通过 `node.invoke` 运行设备本地操作（`system.run`、相机、屏幕录制、通知）。
 简而言之：exec 在 Gateway 所在位置运行；设备操作在设备所在位置运行。
 
-详情：[远程访问](https://docs.openclaw.ai/gateway/remote) · [节点](https://docs.openclaw.ai/nodes) · [安全](https://docs.openclaw.ai/gateway/security)
+详情：[远程访问](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway/remote) · [节点](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes) · [安全](https://github.com/NiuGui8/openclaw-cn/blob/main/gateway/security)
 
 ## 通过 Gateway 协议的 macOS 权限
 
@@ -250,7 +250,7 @@ macOS 应用可以运行在**节点模式**，并通过 Gateway WebSocket 宣传
 - 使用 `/elevated on|off` 在启用 + 允许列表时切换每会话提升访问。
 - Gateway 通过 `sessions.patch`（WS 方法）以及 `thinkingLevel`、`verboseLevel`、`model`、`sendPolicy` 和 `groupActivation` 保持每会话切换。
 
-详情：[节点](https://docs.openclaw.ai/nodes) · [macOS 应用](https://docs.openclaw.ai/platforms/macos) · [Gateway 协议](https://docs.openclaw.ai/concepts/architecture)
+详情：[节点](https://github.com/NiuGui8/openclaw-cn/blob/main/nodes) · [macOS 应用](https://github.com/NiuGui8/openclaw-cn/blob/main/platforms/macos) · [Gateway 协议](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/architecture)
 
 ## 代理到代理（sessions\_\* 工具）
 
@@ -259,7 +259,7 @@ macOS 应用可以运行在**节点模式**，并通过 Gateway WebSocket 宣传
 - `sessions_history` — 获取会话的转录日志。
 - `sessions_send` — 向另一个会话发送消息；可选的回复来回 ping-pong + 宣布步骤（`REPLY_SKIP`、`ANNOUNCE_SKIP`）。
 
-详情：[会话工具](https://docs.openclaw.ai/concepts/session-tool)
+详情：[会话工具](https://github.com/NiuGui8/openclaw-cn/blob/main/concepts/session-tool)
 
 ## 技能注册表（ClawHub）
 
