@@ -1,5 +1,16 @@
 # 🦞 OpenClaw — 个人 AI 助手
 
+> ⚡️ **本仓库新增特性**（相对于原始仓库 [openclaw/openclaw](https://github.com/openclaw/openclaw)）
+>
+> 本仓库是 OpenClaw 的中文本地化分支，相较于原始仓库新增了以下渠道支持：
+
+| 渠道 | 文档 | 说明 |
+|------|------|------|
+| 钉钉 | [dingtalk.md](docs/channels/dingtalk.md) | 钉钉机器人 Webhook |
+| 企业微信 | [wecom.md](docs/channels/wecom.md) | 企业微信机器人 Webhook |
+| QQ | [qq.md](docs/channels/qq.md) | 通过 go-cqhttp 中转 |
+| 短信 | [sms.md](docs/channels/sms.md) | 阿里云短信发送 |
+
 <p align="center">
     <picture>
         <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text-dark.png">
