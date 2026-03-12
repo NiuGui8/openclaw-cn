@@ -51,6 +51,9 @@ const entrypoints = [
   "zalouser",
   "account-id",
   "keyed-async-queue",
+  "qq",
+  "wecom",
+  "sms",
 ] as const;
 for (const entry of entrypoints) {
   const out = path.join(process.cwd(), `dist/plugin-sdk/${entry}.d.ts`);

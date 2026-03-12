@@ -1,5 +1,5 @@
-import type { OpenClawPluginApi } from "openclaw/plugin-sdk/qq";
-import { emptyPluginConfigSchema } from "openclaw/plugin-sdk/qq";
+import type { OpenClawPluginApi } from "../../dist/plugin-sdk/qq.js";
+import { emptyPluginConfigSchema } from "../../dist/plugin-sdk/qq.js";
 import { qqPlugin } from "./src/channel.js";
 import { setQQRuntime } from "./src/runtime.js";
 
